@@ -17,6 +17,7 @@ from typing import Tuple, List
 
 import csv
 
+
 def load_dataset(file_path: str) -> Tuple[List[List[float]], List[int]]:
     """Load feature vectors and labels from a CSV file.
 
@@ -49,7 +50,9 @@ def load_dataset(file_path: str) -> Tuple[List[List[float]], List[int]]:
     return features, labels
 
 
-def split_dataset(features: List[List[float]], labels: List[int], test_ratio: float = 0.2) -> Tuple[List[List[float]], List[List[float]], List[int], List[int]]:
+def split_dataset(
+    features: List[List[float]], labels: List[int], test_ratio: float = 0.2
+) -> Tuple[List[List[float]], List[List[float]], List[int], List[int]]:
     """Split the dataset into training and testing sets.
 
     Args:
