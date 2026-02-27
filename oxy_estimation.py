@@ -48,7 +48,9 @@ def read_pa_amplitudes(file_path: str) -> List[float]:
     return amplitudes
 
 
-def estimate_so2(pa1: List[float], pa2: List[float], r_min: float = 0.4, r_max: float = 1.2) -> List[float]:
+def estimate_so2(
+    pa1: List[float], pa2: List[float], r_min: float = 0.4, r_max: float = 1.2
+) -> List[float]:
     """Estimate oxygen saturation (sO₂) using the ratio‑of‑ratios method.
 
     Args:
