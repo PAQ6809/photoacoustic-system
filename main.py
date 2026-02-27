@@ -8,7 +8,9 @@ import math
 import csv
 
 
-def acquire_signal(num_points: int = 1000, frequency: float = 100000.0, decay: float = 0.005):
+def acquire_signal(
+    num_points: int = 1000, frequency: float = 100000.0, decay: float = 0.005
+):
     """Simulate acquiring a decaying sine wave representing a photoacoustic pulse.
 
     Args:
@@ -20,7 +22,10 @@ def acquire_signal(num_points: int = 1000, frequency: float = 100000.0, decay: f
         Tuple of time samples and signal values.
     """
     t = [i / num_points for i in range(num_points)]
-    signal = [math.sin(2 * math.pi * frequency * ti) * math.exp(-decay * ti * num_points) for ti in t]
+    signal = [
+        math.sin(2 * math.pi * frequency * ti) * math.exp(-decay * ti * num_points)
+        for ti in t
+    ]
     return t, signal
 
 
